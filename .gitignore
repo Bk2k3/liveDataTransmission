@@ -47,8 +47,3 @@ frontend/.git/hooks/
 # Git tracking
 frontend/.git/objects/
 frontend/.git/info/
-
-# Optional
-# Uncomment if you're using a tool that creates service worker or cache files
-# service-worker.js
-# precache-manifest.*

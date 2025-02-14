@@ -1,0 +1,226 @@
+.App {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #009688, #004d40);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+/* Heading styling */
+.header {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Display container styling */
+.display-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  flex-wrap: wrap;
+}
+
+/* Segment styling */
+.segment {
+  display: flex;
+  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.segment:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Styling for individual digits */
+.digit {
+  width: 75px;
+  height: 100px;
+  background-color: #111;
+  color: #00ff88;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  font-family: 'Courier New', monospace;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 255, 136, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+.digit:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 255, 136, 0.5);
+  background-color: #222;
+}
+
+/* Smooth pulse animation on number change */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 18px rgba(0, 255, 136, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  }
+}
+
+.digit.pulse-animation {
+  animation: pulse 1s ease-in-out;
+}
+
+/* Small message at the bottom */
+.message {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 40px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .header {
+    font-size: 2.5rem;
+  }
+  
+  .segment {
+    padding: 25px;
+  }
+
+  .digit {
+    width: 65px;
+    height: 90px;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 2rem;
+  }
+
+  .segment {
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .digit {
+    width: 60px;
+    height: 80px;
+    font-size: 2.8rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+}
+/* Import a modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.header {
+  font-size: 4rem; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  font-family: 'Montserrat', sans-serif; /* Modern font */
+  background: linear-gradient(45deg, #00b09b, #96c93d); /* Green gradient color */
+  -webkit-background-clip: text; /* Clip background to text */
+  background-clip: text;
+  color: transparent; /* Make text transparent to show gradient */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  margin-bottom: 30px; /* Space below the header */
+  animation: glow 2s infinite alternate ease-in-out; /* Glowing animation */
+
+  /* White curving border */
+  -webkit-text-stroke: 2px white; /* For modern browsers */
+  paint-order: stroke fill; /* Ensures the border is behind the text */
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #00b09b, 0 0 20px #00b09b, 0 0 30px #00b09b;
+  }
+  100% {
+    text-shadow: 0 0 20px #96c93d, 0 0 40px #96c93d, 0 0 60px #96c93d;
+  }
+}
+
+/* Optional: Add a hover effect */
+.header:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Background running animation */
+.App {
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #1e3c72); /* Blue gradient background */
+  background-size: 200% 200%; /* Larger background size for animation */
+  min-height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(9, 255, 0); /* Yellow text color */
+  padding: 20px;
+  animation: gradientAnimation 10s ease infinite; /* Background animation */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  50% {
+    background-position: 100% 50%; /* Middle position */
+  }
+  100% {
+    background-position: 0% 50%; /* End position */
+  }
+}
