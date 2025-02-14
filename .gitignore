@@ -1,0 +1,54 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Backup files
+*.bak
+*.swp
+*.tmp
+*.old
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Build output
+dist/
+build/
+
+# React-specific
+public/favicon.ico
+public/logo192.png
+public/logo512.png
+
+# Git hooks (already part of .git directory)
+frontend/.git/hooks/
+
+# Git tracking
+frontend/.git/objects/
+frontend/.git/info/
+
+# Optional
+# Uncomment if you're using a tool that creates service worker or cache files
+# service-worker.js
+# precache-manifest.*
