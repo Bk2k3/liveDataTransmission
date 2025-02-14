@@ -143,9 +143,3 @@ project-root/
 Contributions are welcome! Please open an issue or create a pull request.
 
 ---
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
